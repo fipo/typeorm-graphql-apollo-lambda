@@ -1,0 +1,43 @@
+{
+  "name": "typeorm-graphql-apollo-lambda",
+  "version": "1.0.0",
+  "description": "sandbox",
+  "main": "index.js",
+  "repository": "git@github.com:fipo/typeorm-graphql-apollo-lambda.git",
+  "author": "Philip Sotirov<me@philipsotirov.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "nodemon --exec ts-node --files src/index.ts",
+    "lint": "tslint 'src/**/*.{ts,tsx}' -e 'src/migration/*' -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen-schema-types": "gql2ts src/schema.graphql -o src/types/schema.d.ts"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^4.16.1",
+    "@types/faker": "^4.1.5",
+    "@types/node": "^12.0.2",
+    "@types/uuid": "^3.4.4",
+    "nodemon": "^1.19.0",
+    "prettier": "^1.17.1",
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1"
+  },
+  "dependencies": {
+    "apollo-server": "^2.5.0",
+    "apollo-server-express": "^2.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.0",
+    "graphql": "^14.3.0",
+    "graphql-import": "^0.7.1",
+    "mysql2": "^1.6.5",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.17",
+    "typescript": "^3.4.5",
+    "uuid": "^3.3.2"
+  }
+}
